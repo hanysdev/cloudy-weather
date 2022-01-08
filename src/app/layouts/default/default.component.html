@@ -1,21 +1,12 @@
-<header>
-    <div>LOGO</div>
-    <div>
-        <label>Temperature</label>
-        <label>Humidity</label>
-        <label>Pressure</label>
-        <a routerLink="/">Home</a>
-        <a routerLink="/plots">Plots</a>
-    </div>
-</header>
+<app-header flexLayout="column"></app-header>
 
-<div>
-    <div>Sidebar works</div>
-    <div>
+<div flexLayout="row" fxFlex>
+    <div fxFlex="20">
+        <app-sidebar fxFlex></app-sidebar>
+    </div>
+    <div fxFlex="80" class="content">
         <router-outlet></router-outlet>
     </div>
 </div>
 
-<footer>
-    Footer works
-</footer>
+<app-footer></app-footer>
