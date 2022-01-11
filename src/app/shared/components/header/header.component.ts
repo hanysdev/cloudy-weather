@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Measurement } from 'src/app/entities/measurement.entity';
 import { WeatherDataService } from 'src/app/service/data/weather-data.service';
 
 @Component({
@@ -8,20 +10,37 @@ import { WeatherDataService } from 'src/app/service/data/weather-data.service';
 })
 export class HeaderComponent implements OnInit {
 
-  WeatherData:any;
+
+  actualTemperature:any;
+  actualHumidity:any;
+  actualPressure:any;
+  actualAirPollution:any;
+  actualDate:any;
+
+  measurementList$!:Observable<any[]>;
+  measurementList:any=[];
+  myMeasurements:Measurement[] = [];
+  myMeasurementsReversed:Measurement[] =[];
+
   constructor(
     private service : WeatherDataService
   ) { }
 
   ngOnInit(): void {
-    console.log(this.service.executeGetDataFromApi());
-    this.service.executeGetDataFromApi().subscribe(
-      response => this.handleSuccessfulResponse(response)
+    this.service.getMeasurements().subscribe(
+      response => this.findActualTemperature(response)
     );
   }
 
-  handleSuccessfulResponse(response : any) {
-    console.log(response);
+  findActualTemperature(response : any) {
+    this.measurementList = response;
+    this.myMeasurements = this.measurementList;
+    this.actualTemperature = this.myMeasurements[0].temperatur;
+    this.actualHumidity = this.myMeasurements[0].humidity;
+    this.actualPressure = this.myMeasurements[0].pressure;
+    this.actualAirPollution = this.myMeasurements[0].airPollution;
+    this.actualDate = this.myMeasurements[0].takenAt;
+    
   }
 
 }
