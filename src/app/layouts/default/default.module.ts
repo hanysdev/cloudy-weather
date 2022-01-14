@@ -19,6 +19,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
     RouterModule,
     FlexLayoutModule,
     SharedModule
+  ],
+  providers: [
+    HomeComponent
   ]
 })
 export class DefaultModule { }

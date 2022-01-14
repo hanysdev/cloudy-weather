@@ -17,10 +17,8 @@ export class HeaderComponent implements OnInit {
   actualAirPollution:any;
   actualDate:any;
 
-  measurementList$!:Observable<any[]>;
   measurementList:any=[];
   myMeasurements:Measurement[] = [];
-  myMeasurementsReversed:Measurement[] =[];
 
   constructor(
     private service : WeatherDataService

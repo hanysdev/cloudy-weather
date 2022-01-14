@@ -1,1 +1,11 @@
-<p>home works!</p>
+<h2>Choose your period</h2>
+
+<label>Last Day  </label>
+<button (click)="showData30LastForView()" type="button" class="btn btn-dark"></button>
+
+<label>Last Week  </label>
+<button (click)="showData50LastForView()" type="button" class="btn btn-dark"></button>
+
+<div id="divChart">
+    <canvas id="myChart"></canvas>
+</div>

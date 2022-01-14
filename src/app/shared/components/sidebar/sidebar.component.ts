@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeComponent } from 'src/app/modules/home/home.component';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private home : HomeComponent
+  ) { }
 
   ngOnInit(): void {
   }
 
+
+  showLast20(){
+    this.home.showData30LastForView();
+  }
 }

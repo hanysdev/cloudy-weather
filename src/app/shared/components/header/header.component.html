@@ -1,10 +1,10 @@
 <header fxLayoutAlign="space-between center">
-    <div><img class="img-responsive" src="/assets/img/cloudy.jpg"></div>
+    <div><img style="height: 100px;" class="img-responsive" src="/assets/img/cloudy.jpg"></div>
     <div fxLayout="row" fxLayoutGap="30px">
-        <label>Temperature {{actualTemperature}} </label>
-        <label>Humidity {{actualHumidity}} </label>
-        <label>Pressure {{actualPressure}} </label>
-        <label>Air Pollution {{actualAirPollution}}</label>
+        <label>Temperature {{actualTemperature}} °C</label>
+        <label>Humidity {{actualHumidity}} %</label>
+        <label>Pressure {{actualPressure}} hPa</label>
+        <label>Air Pollution {{actualAirPollution}} µg/m3</label>
         <label>Date {{actualDate | date:'medium'}}</label>
         
     </div>

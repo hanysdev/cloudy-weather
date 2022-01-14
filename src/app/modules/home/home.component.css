@@ -1,0 +1,15 @@
+#divChart{
+    display: block;
+    width: 1500px;
+    height: 1000px;
+}
+
+label{
+    padding: 10px;
+}
+
+.btn{
+    padding: 10px;
+    height: 20px;
+    width:  100px;
+}

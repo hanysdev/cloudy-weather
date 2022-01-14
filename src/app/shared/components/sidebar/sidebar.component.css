@@ -2,3 +2,17 @@
     padding: 20px;
     background-color: violet;
 }
+
+h1 {
+    font-size: 25px;
+}
+
+label{
+    padding: 20px;
+}
+
+.btn{
+    padding: 20px;
+    height: 30px;
+    width:  100px;
+}
