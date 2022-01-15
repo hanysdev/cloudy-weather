@@ -16,7 +16,4 @@ export class SidebarComponent implements OnInit {
   }
 
 
-  showLast20(){
-    this.home.showData30LastForView();
-  }
 }

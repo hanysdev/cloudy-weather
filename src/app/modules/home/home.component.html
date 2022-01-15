@@ -1,10 +1,20 @@
 <h2>Choose your period</h2>
+<div id="container">
 
-<label>Last Day  </label>
-<button (click)="showData30LastForView()" type="button" class="btn btn-dark"></button>
+    <label>Last Minute </label>
+    <button (click)="showLastMinute()" type="button" class="btn btn-dark"></button>
 
-<label>Last Week  </label>
-<button (click)="showData50LastForView()" type="button" class="btn btn-dark"></button>
+    <label>Last 15 Minutes </label>
+    <button (click)="showLast15Minutes()" type="button" class="btn btn-dark"></button>
+
+    <label>Last Hour </label>
+    <button (click)="showLastHour()" type="button" class="btn btn-dark"></button>
+
+    <label>Last Day </label>
+    <button (click)="showLastMinute()" type="button" class="btn btn-dark"></button>
+
+
+</div>
 
 <div id="divChart">
     <canvas id="myChart"></canvas>
