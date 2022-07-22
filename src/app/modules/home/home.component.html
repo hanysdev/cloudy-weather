@@ -7,15 +7,33 @@
     <label>Last 15 Minutes </label>
     <button (click)="showLast15Minutes()" type="button" class="btn btn-dark"></button>
 
+    <label>Last 30 Minutes </label>
+    <button (click)="showLast30Minutes()" type="button" class="btn btn-dark"></button>
+
+    <label>Last 45 Minutes </label>
+    <button (click)="showLast45Minutes()" type="button" class="btn btn-dark"></button>
+
     <label>Last Hour </label>
     <button (click)="showLastHour()" type="button" class="btn btn-dark"></button>
 
     <label>Last Day </label>
-    <button (click)="showLastMinute()" type="button" class="btn btn-dark"></button>
+    <button (click)="showLastDay()" type="button" class="btn btn-dark"></button>
+
+    <label>Last Week </label>
+    <button (click)="showLastWeek()" type="button" class="btn btn-dark"></button>
 
 
 </div>
 
 <div id="divChart">
     <canvas id="myChart"></canvas>
+</div>
+<div id="divChart">
+    <canvas id="myChartHumidity"></canvas>
+</div>
+<div id="divChart">
+    <canvas id="myChartPressure"></canvas>
+</div>
+<div id="divChart">
+    <canvas id="myChartAirPollution"></canvas>
 </div>

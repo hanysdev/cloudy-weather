@@ -2,5 +2,12 @@ header {
     background-color: #292e1e;
     font-family: Verdana, sans-serif;
     color: snow;
-    font-size: 25px;
+    font-size: 24px;
+}
+
+#airPollutionLabel{
+    background-color: violet;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
 }
